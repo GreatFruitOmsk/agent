@@ -1,0 +1,20 @@
+Source: wott-agent
+Maintainer: Artem Martynovich <artem.martynovich@gmail.com>
+Homepage: https://www.wott.io/
+Section: python
+Priority: extra
+Build-Depends:
+ debhelper (>= 9),
+ dh-virtualenv (>= 1.0),
+ python3.5
+Standards-Version: 3.9.8
+Vcs-Git: https://github.com/WoTTsecurity/agent.git
+Vcs-Browser: https://github.com/WoTTsecurity/agent
+X-Python3-Version: >= 3.5
+
+Package: wott-agent
+Architecture: all
+Section: python
+Depends: ${misc:Depends},
+ rng-tools
+Description: Let's Encrypt for IoT (with more bells and whistles).

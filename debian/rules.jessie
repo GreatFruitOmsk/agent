@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+export DH_VERBOSE=1
+
+%:
+	dh $@ --with python-virtualenv
+
+override_dh_virtualenv:
+	dh_virtualenv --python python3.5 --setuptools --preinstall setuptools --upgrade-pip --builtin-venv
+
+override_dh_auto_test:
+	# Don't run the tests!
